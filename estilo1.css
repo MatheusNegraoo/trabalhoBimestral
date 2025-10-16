@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#topo {
+    display: flex;
+    width: 100vw;
+    height: 25vh;
+    background-color: brown;
+    flex-wrap: wrap;
+}
+#topo #nome-empresa{
+    width: 70%;
+    height: 80%;
+}
+#topo #logo{
+    width: 30%;
+    height: 80%;
+}
+#topo #menu{
+        width: 100%;
+        height: 20%;
+        background-color: white;
+    }
+
+ 
+
+#img {
+    display: flex;
+    justify-content: end;
+    width: 90vw;
+    height: 1vh;
+    align-items: end;
+    margin-top: 50px;
+}
+
+#meio {
+    background-color: cadetblue;
+}
+
+#funcoes {
+    background-color: crimson;
+    height: 15vh;
+    width: 100vw;
+
+}
