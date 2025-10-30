@@ -1,52 +1,342 @@
+/* Reset de estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
 }
 
+/* Cabeçalho */
 #topo {
     display: flex;
-    width: 100vw;
-    height: 25vh;
-    background-color: brown;
+    width: 100%;
+    height: 30vh;
+    background-color: #8B0000; /* Cor quente, como fogo */
     flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 10px 5%;
+    align-items: center;
 }
-#topo #nome-empresa{
+
+#topo #nome-empresa {
     width: 70%;
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
 }
-#topo #logo{
+
+#topo #nome-empresa h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+#topo #logo {
     width: 30%;
-    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#topo #menu{
-        width: 100%;
-        height: 20%;
-        background-color: white;
-    }
 
- 
+#topo #logo img {
+    max-width: 100%;
+    height: auto;
+}
 
+#topo #menu {
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#topo #menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#topo #menu ul li {
+    margin: 0 20px;
+}
+
+#topo #menu ul li a {
+    color: #8B0000; /* Cor vermelha */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+#topo #menu ul li a:hover {
+    color: #FFD700; 
+    transform: scale(1.1); 
+}
+
+/* Seção Principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagem de boas-vindas */
 #img {
     display: flex;
-    justify-content: end;
-    width: 90vw;
-    height: 1vh;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh; 
+    background-color: #DAA520; 
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+
+#img img {
+    height: 25vh;
+    width: 25vw;
+    margin-left: 30px;
+}
+
+/* Seção de pratos com categorias */
+#pratos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    height: 50vh;
+    margin-bottom: 20px;
+}
+
+#pratos .prato {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#pratos .prato:hover {
+    transform: scale(1.05); /* Efeito de "crescer" no prato */
+}
+
+#pratos h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#pratos p {
+    font-size: 1rem;
+    color: #333;
+}
+
+#pratos p {
     margin-top: 50px;
+
+    
 }
 
+/* Seção de informações adicionais */
 #meio {
-    background-color: cadetblue;
+    background-color: #B0C4DE; /* Cor cadetblue */
+    width: 80%;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-#funcoes {
-    background-color: crimson;
-    height: 15vh;
-    width: 100vw;
+#meio p {
+    font-size: 1.2rem;
+    color: #333;
+}
 
+/* Seção de funções e promoções */
+#parte {
+    background-color: #DC143C; 
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Footer */
+#fundo {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#fundo p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+
+/* 1. Para Celular */
+@media (max-width: 480px) {
+    #topo {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    #topo #logo, #topo #nome-empresa {
+        width: 100%;
+    }
+
+    #topo #nome-empresa h1 {
+        font-size: 1.8rem;
+    }
+
+    #img {
+        font-size: 1.8rem;
+        height: 50vh;
+    }
+
+    #img img {
+        height: 20vh;
+        width: auto;
+        margin-left: 0;
+    }
+
+    #pratos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #pratos .prato {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    #meio {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #parte {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    #fundo {
+        font-size: 0.9rem;
+    }
+}
+
+/* 2. Para Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    #topo {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    #topo #logo, #topo #nome-empresa {
+        width: 100%;
+    }
+
+    #topo #nome-empresa h1 {
+        font-size: 2.2rem;
+    }
+
+    #img {
+        font-size: 2rem;
+        height: 55vh;
+    }
+
+    #img img {
+        height: 20vh;
+        width: auto;
+    }
+
+    #pratos {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    #pratos .prato {
+        width: 40%;
+    }
+
+    #meio {
+        width: 85%;
+        padding: 25px;
+    }
+
+    #parte {
+        font-size: 1.3rem;
+        padding: 18px;
+    }
+
+    #fundo {
+        font-size: 1rem;
+    }
+}
+
+/* 3. Para Desktop */
+@media (min-width: 1025px) {
+    #topo {
+        flex-direction: row;
+        height: 30vh;
+    }
+
+    #topo #logo, #topo #nome-empresa {
+        width: 50%;
+    }
+
+    #img {
+        font-size: 2.5rem;
+        height: 60vh;
+    }
+
+    #pratos {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #pratos .prato {
+        width: 30%;
+    }
+
+    #meio {
+        width: 80%;
+        padding: 40px;
+    }
+
+    #parte {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    #fundo {
+        font-size: 1rem;
+    }
 }
