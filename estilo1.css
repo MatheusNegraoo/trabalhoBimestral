@@ -133,7 +133,7 @@ main {
 }
 
 #pratos .prato:hover {
-    transform: scale(1.05); /* Efeito de "crescer" no prato */
+    transform: scale(1.05); 
 }
 
 #pratos h3 {
@@ -152,9 +152,9 @@ main {
     
 }
 
-/* Seção de informações adicionais */
+
 #meio {
-    background-color: #B0C4DE; /* Cor cadetblue */
+    background-color: #B0C4DE;
     width: 80%;
     padding: 40px;
     margin-top: 20px;
