@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -16,7 +14,6 @@ body {
     align-items: center;
 }
 
-/* Cabeçalho */
 header {
     text-align: center;
     background-color: #8B0000;
@@ -36,7 +33,6 @@ header p {
     font-size: 18px;
 }
 
-/* Seção do cardápio */
 .menu {
     width: 100%;
     max-width: 600px;
@@ -44,8 +40,8 @@ header p {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Iniciar invisível */
-    animation: fadeInUp 1s forwards; /* Animação para a seção do menu */
+    opacity: 0; 
+    animation: fadeInUp 1s forwards;
 }
 
 .menu h2 {
@@ -57,25 +53,25 @@ header p {
 
 .menu-item {
     margin-bottom: 20px;
-    opacity: 0; /* Começar invisível */
-    transform: translateY(20px); /* Mover os itens um pouco para baixo */
+    opacity: 0; 
+    transform: translateY(20px);
     animation: slideInUp 0.5s forwards;
 }
 
 .menu-item:nth-child(1) {
-    animation-delay: 0.3s; /* Delay para a animação do primeiro item */
+    animation-delay: 0.3s; 
 }
 
 .menu-item:nth-child(2) {
-    animation-delay: 0.5s; /* Delay para o segundo item */
+    animation-delay: 0.5s; 
 }
 
 .menu-item:nth-child(3) {
-    animation-delay: 0.7s; /* Delay para o terceiro item */
+    animation-delay: 0.7s; 
 }
 
 .menu-item:nth-child(4) {
-    animation-delay: 0.9s; /* Delay para o quarto item */
+    animation-delay: 0.9s; 
 }
 
 .menu-item h3 {
@@ -96,7 +92,6 @@ header p {
     color: #2e6da4;
 }
 
-/* Rodapé */
 footer {
     text-align: center;
     margin-top: 30px;
@@ -104,7 +99,6 @@ footer {
     color: #777;
 }
 
-/* Nova seção de links */
 .links {
     width: 100%;
     max-width: 600px;
@@ -141,7 +135,6 @@ footer {
     color: #8B0000;
 }
 
-/* Animação para a seção do cardápio */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -153,7 +146,6 @@ footer {
     }
 }
 
-/* Animação para os itens do menu */
 @keyframes slideInUp {
     0% {
         opacity: 0;

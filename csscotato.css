@@ -35,7 +35,6 @@ body {
     margin-top: 5px;
 }
 
-/* Menu de navegação */
 #menu {
     background-color: #333;
     padding: 10px;
@@ -60,10 +59,9 @@ body {
 }
 
 #menu ul li a:hover {
-    color: #FFD700; /* Dourado */
+    color: #FFD700; 
 }
 
-/* Seção de Contato */
 #contato {
     display: grid;
     grid-template-columns: 1fr;
@@ -116,7 +114,6 @@ button:hover {
     background-color: #B22222; /* Tom de vermelho mais claro */
 }
 
-/* Seção de Informações */
 #informacoes {
     background-color: #fff;
     padding: 20px;
@@ -133,7 +130,6 @@ button:hover {
     font-size: 1.2rem;
 }
 
-/* Rodapé */
 #fundo {
     background-color: #333;
     color: white;
@@ -145,7 +141,6 @@ button:hover {
     font-size: 1rem;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     #topo {
         grid-template-columns: 1fr;
