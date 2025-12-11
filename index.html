@@ -24,30 +24,29 @@
     </header>
 
     <main>
-        <!-- Imagem e slogan de boas-vindas -->
+        
         <div id="img">
             <h2>Bem-vindo ao Sabor da Brasa!</h2>
-            <img src="img/as_7_melhores_carnes_para_churrasco_21-05-2019.jpg" alt="">
+            <!-- Aqui será a imagem que será alterada pelo JavaScript -->
+            <img id="imagem-main" src="img/as_7_melhores_carnes_para_churrasco_21-05-2019.jpg" alt="">
         </div>
 
-        <!-- Seção de pratos com categorias -->
+        
         <div id="pratos">
             <div class="prato" id="carnes">
                 <h3>Carnes</h3>
                 <h4>Explore nossa seleção de carnes nobres.</h4>
-                <p>"Saboreie o melhor do churrasco: cortes nobres, selecionados e preparados com a mestria que só o fogo pode oferecer."
-                    "A felicidade em cada garfada. Carnes suculentas, temperadas na medida certa, que transformam sua refeição em uma experiência inesquecível."
-                    "Do nosso espeto para a sua mesa. A tradição do churrasco brasileiro com o sabor autêntico que você adora.</p>
+                <p>"Saboreie o melhor do churrasco: cortes nobres, selecionados e preparados com a mestria que só o fogo pode oferecer."</p>
             </div>
             <div class="prato" id="sobremesas">
                 <h3>Sobremesas</h3>
                 <h4>Delicie-se com nossas sobremesas irresistíveis.</h4>
-                <p>"Após uma experiência inesquecível com os nossos nobres cortes de carne, permita-se o grand finale. Nossa seleção de sobremesas é um tributo à doçura, com criações clássicas e toques de modernidade, elaboradas para fechar sua refeição com elegância e sabor. Uma pausa perfeita para adoçar o paladar."</p>
+                <p>"Após uma experiência inesquecível com os nossos nobres cortes de carne, permita-se o grand finale. Nossa seleção de sobremesas é um tributo à doçura."</p>
             </div>
             <div class="prato" id="bebidas">
                 <h3>Bebidas</h3>
                 <h4>Refresque-se com nossas bebidas especiais.</h4>
-                <p>"Acompanhe o sabor robusto de nossas carnes com a seleção perfeita de bebidas. Da leveza de um chopp gelado à complexidade de nossos vinhos tintos, cada opção foi pensada para complementar e realçar a sua experiência gastronômica."</p>
+                <p>"Acompanhe o sabor robusto de nossas carnes com a seleção perfeita de bebidas."</p>
             </div>
         </div>
 
@@ -61,5 +60,26 @@
         <p>&copy; 2025 Churrascaria Brasil. Todos os direitos reservados.</p>
         <p>Matheus Negrão 1°INF</p>
     </footer>
+
+    <script>
+        // Selecionando o elemento de imagem dentro do main
+        const imagemMain = document.getElementById('imagem-main');
+        
+        // Adicionando event listener para cada prato
+        document.getElementById('carnes').addEventListener('click', function() {
+            // Alterando a imagem para "Carnes"
+            imagemMain.src = 'img/as_7_melhores_carnes_para_churrasco_21-05-2019.jpg';  // Altere para o caminho correto da imagem de carnes
+        });
+
+        document.getElementById('sobremesas').addEventListener('click', function() {
+            // Alterando a imagem para "Sobremesas"
+            imagemMain.src = 'img/maxresdefault.jpg';  // Altere para o caminho correto da imagem de sobremesas
+        });
+
+        document.getElementById('bebidas').addEventListener('click', function() {
+            // Alterando a imagem para "Bebidas"
+            imagemMain.src = 'img/bebidas.jpg';  // Altere para o caminho correto da imagem de bebidas
+        });
+    </script>
 </body>
 </html>
